@@ -1,0 +1,8 @@
+*.o
+*.a
+*.gcno
+*.gcda
+*.vscode
+*.exe
+*.dll
+unit_tests
