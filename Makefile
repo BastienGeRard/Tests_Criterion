@@ -12,12 +12,45 @@ CFLAGS 	=  	-Iinclude -Wall -Wextra -Wshadow
 CHM     =	src/
 
 SRC 	=  	$(CHM)main.c   \
+			$(CHM)my_blackjack.c   \
+			$(CHM)init_struct_blackjack.c   \
+			$(CHM)welcome_message.c   \
+			$(CHM)pull_card.c   \
+			$(CHM)show_cards.c   \
+			$(CHM)scan_choice_player.c   \
+			$(CHM)game_loop.c   \
+			$(CHM)calcul_score.c   \
+			$(CHM)handle_dealer.c   \
+			$(CHM)check_over_bj.c   \
+			$(CHM)user_pull_card.c   \
+			$(CHM)win_loose_cond.c   \
 
-SRCTEST =
+SRCTEST =	$(CHM)my_blackjack.c   \
+			$(CHM)init_struct_blackjack.c   \
+			$(CHM)welcome_message.c   \
+			$(CHM)pull_card.c   \
+			$(CHM)show_cards.c   \
+			$(CHM)scan_choice_player.c   \
+			$(CHM)game_loop.c   \
+			$(CHM)calcul_score.c   \
+			$(CHM)handle_dealer.c   \
+			$(CHM)check_over_bj.c   \
+			$(CHM)user_pull_card.c   \
+			$(CHM)win_loose_cond.c   \
 
-TEST 	=	./tests/test.c
+TEST 	=	tests/test_check_over_bj.c   \
+			tests/test_game_loop.c   \
+			tests/test_handle_dealer.c   \
+			tests/test_init_struct_bj.c   \
+			tests/test_blackjack.c   \
+			tests/test_pull_card.c   \
+			tests/test_scan_choice_player.c   \
+			tests/test_show_cards.c   \
+			tests/test_user_pull_card.c   \
+			tests/test_welcome_message.c   \
+			tests/test_win_loose_cond.c   \
 
-NAME 	= test
+NAME 	= my_blackjack
 
 NAMETEST = 	unit_tests
 
