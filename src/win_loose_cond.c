@@ -15,7 +15,6 @@ static void win_loose_conditions_next(blackjack_t bj)
     } else {
         printf("Vous avez perdu %f!\n", bj.mise);
     }
-
 }
 
 void win_loose_conditions(blackjack_t bj)

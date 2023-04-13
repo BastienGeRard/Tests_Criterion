@@ -19,8 +19,8 @@ int scan_choice_player(blackjack_t *bj)
     }
     printf("Voulez-vous tirer une carte (T) ou rester (R)? ");
     fgets(input, sizeof(input), stdin);
-    if (sscanf(input, " %1c", &bj->choice) != 1) {
-        printf("Entrée invalide.\n");
+    if (sscanf(input, " %c", &bj->choice) != 1) {
+        printf("\nEntrée invalide.\n");
         free(input);
         return 1;
     }
