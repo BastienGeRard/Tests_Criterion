@@ -18,7 +18,7 @@ static blackjack_t dealer_pull_card(blackjack_t bj)
     return bj;
 }
 
-static void show_dealer_card(blackjack_t bj)
+void show_dealer_card(blackjack_t bj)
 {
     printf("Main du croupier: ");
     for (int i = 0; i < bj.nb_dealer; i++) {
@@ -27,10 +27,12 @@ static void show_dealer_card(blackjack_t bj)
     printf("\n");
 }
 
-void handle_dealer(blackjack_t bj)
+blackjack_t handle_dealer(blackjack_t bj)
 {
-    bj.score_dealer = calcul_score(bj.dealer_card, bj.nb_dealer);
+    bj.score_player = calcul_score(bj.player_card, bj.nb_player);
     bj = dealer_pull_card(bj);
     show_dealer_card(bj);
-    bj.score_player = calcul_score(bj.player_card, bj.nb_player);
+    bj.score_dealer = calcul_score(bj.dealer_card, bj.nb_dealer);
+    printf("Score du croupier: %d\n", bj.score_dealer);
+    return bj;
 }

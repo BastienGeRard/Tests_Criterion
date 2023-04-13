@@ -9,21 +9,16 @@
 #include <stdlib.h>
 #include "../include/blackjack.h"
 
-int scan_choice_player(blackjack_t *bj)
+char *scan_choice_player(void)
 {
-    char *input = malloc(sizeof(char) * 100);
+    char *input = NULL;
+    size_t input_size = 0;
 
-    if (input == NULL) {
-        printf("Error allocation memory.\n");
-        return 1;
-    }
     printf("Voulez-vous tirer une carte (T) ou rester (R)? ");
-    fgets(input, sizeof(input), stdin);
-    if (sscanf(input, " %c", &bj->choice) != 1) {
-        printf("\nEntrée invalide.\n");
-        free(input);
-        return 1;
+    if (getline(&input, &input_size, stdin) == -1) {
+        printf("\nErreur lors de la lecture de l'entrée.\n");
+        return NULL;
     }
+    return input;
     free(input);
-    return 0;
 }

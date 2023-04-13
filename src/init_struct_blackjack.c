@@ -5,6 +5,8 @@
 ** init_struct_blackjack
 */
 
+#include <stddef.h>
+#include <stdbool.h>
 #include "../include/blackjack.h"
 
 blackjack_t init_struct_blackjack(float mise)
@@ -13,7 +15,7 @@ blackjack_t init_struct_blackjack(float mise)
 
     blackjack.nb_player = 2;
     blackjack.nb_dealer = 2;
-    blackjack.choice = ' ';
+    blackjack.choice = " ";
     for (int i = 0; i < 21; i++) {
         blackjack.player_card[i] = 0;
         blackjack.dealer_card[i] = 0;

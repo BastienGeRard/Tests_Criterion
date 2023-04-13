@@ -10,5 +10,5 @@
 void welcome_message(float mise)
 {
     printf("Bienvenue au Blackjack !\n");
-    printf("Vous avez misez %f euros.\n\n", mise);
+    printf("Vous avez misez %.2f euros.\n\n", mise);
 }

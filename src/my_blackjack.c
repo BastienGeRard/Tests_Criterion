@@ -18,8 +18,12 @@ void my_blackjack(int mise)
     srand(time(NULL));
     bj = pull_start_hand(bj);
     show_card_start(bj.player_card, bj.dealer_card);
+    if (is_blackjack(bj) == 1) {
+        print_blackjack(bj);
+        return;
+    }
     bj = game_loop(bj);
     if (bj.game_over == false)
-        handle_dealer(bj);
+        bj = handle_dealer(bj);
     win_loose_conditions(bj);
 }

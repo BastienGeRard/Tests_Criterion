@@ -24,6 +24,8 @@ SRC 	=  	$(CHM)main.c   \
 			$(CHM)check_over_bj.c   \
 			$(CHM)user_pull_card.c   \
 			$(CHM)win_loose_cond.c   \
+			$(CHM)is_blackjack.c   \
+			$(CHM)print_blackjack.c   \
 
 SRCTEST =	$(CHM)my_blackjack.c   \
 			$(CHM)init_struct_blackjack.c   \
@@ -37,6 +39,8 @@ SRCTEST =	$(CHM)my_blackjack.c   \
 			$(CHM)check_over_bj.c   \
 			$(CHM)user_pull_card.c   \
 			$(CHM)win_loose_cond.c   \
+			$(CHM)is_blackjack.c   \
+			$(CHM)print_blackjack.c   \
 
 TEST 	=	tests/test_check_over_bj.c   \
 			tests/test_game_loop.c   \

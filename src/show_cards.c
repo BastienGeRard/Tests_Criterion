@@ -9,6 +9,7 @@
 
 void show_card_start(int *player_card, int *dealer_card)
 {
-    printf("Cartes du joueur : %d %d\n", player_card[0], player_card[1]);
+    printf("Cartes du joueur : %d %d ", player_card[0], player_card[1]);
+    printf("(%d)\n", player_card[0] + player_card[1]);
     printf("Cartes du croupier : %d ??\n", dealer_card[0]);
 }
